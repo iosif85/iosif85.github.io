@@ -4,41 +4,51 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Iosif Miclea • Portfolio</title>
-  <meta name="description" content="Iosif — full‑stack learner focused on Python/Flask + React. Projects, skills, and contact." />
+  <meta name="description" content="Iosif Miclea — full-stack learner focused on Python/Flask + React. Projects, skills, and contact." />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Iosif Miclea • Portfolio" />
   <meta property="og:description" content="NestSwap and other projects • Python, Flask, React, Tailwind" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://<iosif85>.github.io/" />
-  <meta property="og:image" content="https://<iosif85>.github.io/og-image.png" />
-  <!-- Tailwind Play CDN (enough for a simple static site) -->
+  <meta property="og:url" content="https://iosif85.github.io/" />
+  <meta property="og:image" content="https://iosif85.github.io/og-image.png" />
+
+  <!-- Tailwind CDN (simple static site, no build step needed) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{--green:#2f5d50;--blue:#2b6cb0;--earth:#8a7a5b;--ink:#0f172a}
     .chip{border:1px solid rgba(15,23,42,.12);border-radius:9999px;padding:.25rem .6rem;font-size:.8rem}
+    .btn{border-radius:0.75rem;padding:.6rem 1rem;display:inline-flex;align-items:center;justify-content:center}
   </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:ring">Skip to content</a>
+
   <!-- Header / Nav -->
   <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <a href="#" class="font-semibold text-slate-900">Andreea</a>
-      <nav class="flex items-center gap-4 text-sm">
+      <a href="/" class="font-semibold text-slate-900" aria-label="Home">Iosif Miclea</a>
+      <nav class="flex items-center gap-4 text-sm" aria-label="Primary">
         <a href="#projects" class="hover:text-[color:var(--blue)]">Projects</a>
         <a href="#skills" class="hover:text-[color:var(--blue)]">Skills</a>
         <a href="#about" class="hover:text-[color:var(--blue)]">About</a>
-        <a href="#contact" class="rounded-lg bg-[color:var(--green)] px-3 py-1.5 text-white hover:opacity-95">Contact</a>
+        <a href="#contact" class="btn bg-[color:var(--green)] text-white hover:opacity-95">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="mx-auto max-w-6xl px-4 py-16">
+  <section class="mx-auto max-w-6xl px-4 py-16" id="main">
     <div class="grid items-center gap-8 md:grid-cols-12">
       <div class="md:col-span-7">
         <div class="inline-flex items-center gap-2 rounded-full bg-[color:var(--green)]/10 px-3 py-1 text-sm text-[color:var(--green)]">Portfolio</div>
-        <h1 class="mt-4 text-4xl font-semibold text-[color:var(--ink)]">Hello, I’m Iosif — building secure, user‑friendly web apps.</h1>
-        <p class="mt-3 text-slate-700">Focused on Python/Flask, React, and networking fundamentals. Below is my assessment project **NestSwap** plus other highlights.</p>
+        <h1 class="mt-4 text-4xl font-semibold text-[color:var(--ink)]">
+          Hello, I’m <span class="whitespace-nowrap">Iosif Miclea</span> — building secure, user-friendly web apps.
+        </h1>
+        <p class="mt-3 text-slate-700">
+          Focused on Python/Flask, React, and networking fundamentals. Below is my assessment project <strong>NestSwap</strong> plus other highlights.
+        </p>
         <div class="mt-6 flex flex-wrap gap-2">
           <span class="chip">Python</span>
           <span class="chip">Flask</span>
@@ -48,12 +58,14 @@
           <span class="chip">Security</span>
         </div>
       </div>
+
       <div class="md:col-span-5">
         <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p class="text-sm text-slate-600">Download assessment PDF</p>
-          <a href="./Andreea-NestSwap-Assessment.pdf" class="mt-2 block rounded-xl bg-[color:var(--blue)] px-4 py-3 text-center text-white hover:opacity-95">Submission PDF</a>
+          <!-- Update the href to your actual PDF filename or remove the button -->
+          <a href="./IosifMiclea-NestSwap-Assessment.pdf" class="mt-2 block btn bg-[color:var(--blue)] text-white hover:opacity-95 text-center">Submission PDF</a>
           <p class="mt-4 text-sm text-slate-600">CV (optional)</p>
-          <a href="./Andreea-CV.pdf" class="mt-2 block rounded-xl border border-slate-300 bg-white px-4 py-3 text-center hover:bg-slate-50">Download CV</a>
+          <a href="./IosifMiclea-CV.pdf" class="mt-2 block btn border border-slate-300 bg-white hover:bg-slate-50 text-center">Download CV</a>
         </div>
       </div>
     </div>
@@ -62,16 +74,26 @@
   <!-- Projects -->
   <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Projects</h2>
+
     <div class="mt-6 grid gap-6 md:grid-cols-2">
       <!-- NestSwap card -->
       <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <div class="flex items-start justify-between">
+        <div class="flex items-start justify-between gap-4">
           <h3 class="text-xl font-semibold">NestSwap — Caravan & Cabin Exchange</h3>
-          <span class="chip bg-emerald-50 text-emerald-700">Full‑stack</span>
+          <span class="chip bg-emerald-50 text-emerald-700">Full-stack</span>
         </div>
-        <p class="mt-2 text-slate-700">Browse is free. Premium (£10/year) unlocks **listing**, **messaging**, and **exchanges**. Secure auth, Stripe membership, photo uploads, map search, per‑day availability, and admin moderation.</p>
-        <img src="./screenshots/nestswap-hero.png" alt="NestSwap screenshot" class="mt-4 w-full rounded-xl border border-slate-200 object-cover" />
-        <ul class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600">
+
+        <p class="mt-2 text-slate-700">
+          Browse is free. Premium (£10/year) unlocks <strong>listing</strong>, <strong>messaging</strong>, and <strong>exchanges</strong>.
+          Tech includes secure auth, Stripe membership, photo uploads, map search, per-day availability, and admin moderation.
+        </p>
+
+        <!-- Add a real screenshot in /screenshots and update the filename -->
+        <img src="./screenshots/nestswap-hero.png"
+             alt="NestSwap UI preview: listings and map"
+             class="mt-4 w-full rounded-xl border border-slate-200 object-cover" />
+
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600" aria-label="Technologies used">
           <li class="chip">Flask</li>
           <li class="chip">React</li>
           <li class="chip">Stripe</li>
@@ -79,24 +101,29 @@
           <li class="chip">Leaflet</li>
           <li class="chip">Tailwind</li>
         </ul>
+
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="<REPLIT_DEMO_URL>" class="rounded-xl bg-[color:var(--green)] px-4 py-2 text-white hover:opacity-95">Live demo</a>
-          <a href="<GITHUB_REPO_URL>" class="rounded-xl border border-slate-300 bg-white px-4 py-2 hover:bg-slate-50">GitHub</a>
-          <a href="./docs/screenshots/" class="rounded-xl border border-slate-300 bg-white px-4 py-2 hover:bg-slate-50">Screenshots</a>
+          <!-- UPDATE these links -->
+          <a href="<UPDATE_REPLIT_DEMO_URL>" class="btn bg-[color:var(--green)] text-white hover:opacity-95">Live demo</a>
+          <a href="https://github.com/iosif85/<UPDATE_PROJECT_REPO>"
+             class="btn border border-slate-300 bg-white hover:bg-slate-50">GitHub</a>
+          <a href="./docs/screenshots/" class="btn border border-slate-300 bg-white hover:bg-slate-50">Screenshots</a>
         </div>
       </article>
 
-      <!-- Add another project if needed -->
+      <!-- Example secondary project (edit or duplicate this block) -->
       <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h3 class="text-xl font-semibold">Networking Lab Scripts</h3>
-        <p class="mt-2 text-slate-700">Small Python utilities that automate common networking tasks (config templating, log parsing). Focus on clean CLI design and testability.</p>
+        <p class="mt-2 text-slate-700">
+          Small Python utilities that automate common networking tasks (config templating, log parsing).
+          Focus on clean CLI design and testability.
+        </p>
         <ul class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600">
-          <li class="chip">Python</li>
-          <li class="chip">CLI</li>
-          <li class="chip">Testing</li>
+          <li class="chip">Python</li><li class="chip">CLI</li><li class="chip">Testing</li>
         </ul>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="rounded-xl border border-slate-300 bg-white px-4 py-2 hover:bg-slate-50">GitHub</a>
+          <a href="https://github.com/iosif85/<UPDATE_NETWORKING_REPO>"
+             class="btn border border-slate-300 bg-white hover:bg-slate-50">GitHub</a>
         </div>
       </article>
     </div>
@@ -106,26 +133,47 @@
   <section id="skills" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Skills</h2>
     <div class="mt-4 grid gap-4 md:grid-cols-3">
-      <div class="rounded-2xl border border-slate-200 bg-white p-5"><h4 class="font-medium">Back‑end</h4><p class="mt-2 text-sm text-slate-700">Python, Flask, REST, SQLAlchemy, SQLite, Auth (JWT+CSRF), Stripe webhooks</p></div>
-      <div class="rounded-2xl border border-slate-200 bg-white p-5"><h4 class="font-medium">Front‑end</h4><p class="mt-2 text-sm text-slate-700">React, TypeScript, Tailwind, React Router, React Query, accessibility basics</p></div>
-      <div class="rounded-2xl border border-slate-200 bg-white p-5"><h4 class="font-medium">Ops & Tools</h4><p class="mt-2 text-sm text-slate-700">Git/GitHub, Replit, Trello, testing with pytest</p></div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Back-end</h4>
+        <p class="mt-2 text-sm text-slate-700">Python, Flask, REST, SQLAlchemy, SQLite, Auth (JWT + CSRF), Stripe webhooks</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Front-end</h4>
+        <p class="mt-2 text-sm text-slate-700">React, TypeScript, Tailwind, React Router, React Query, accessibility basics</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Ops & Tools</h4>
+        <p class="mt-2 text-sm text-slate-700">Git/GitHub, Replit, Trello, testing with pytest</p>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-2xl font-semibold text-[color:var(--ink)]">About</h2>
-    <p class="mt-2 max-w-3xl text-slate-700">I’m building toward a full‑stack developer role that blends my networking background with modern web engineering. I care about clear UX, secure by default patterns, and shipping practical, maintainable features.</p>
+    <p class="mt-2 max-w-3xl text-slate-700">
+      I’m building toward a full-stack developer role that blends my networking background with modern web engineering.
+      I care about clear UX, secure-by-default patterns, and shipping practical, maintainable features.
+    </p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Contact</h2>
-    <p class="mt-2 text-slate-700">Email: <a class="text-[color:var(--blue)] underline" href="mailto:<you>@example.com"><you>@example.com</a> · LinkedIn: <a class="text-[color:var(--blue)] underline" href="#">link</a></p>
+    <p class="mt-2 text-slate-700">
+      Email:
+      <a class="text-[color:var(--blue)] underline" href="mailto:<UPDATE_EMAIL>"><UPDATE_EMAIL></a>
+      · LinkedIn:
+      <a class="text-[color:var(--blue)] underline" href="<UPDATE_LINKEDIN_URL>">linkedin.com/in/<UPDATE_HANDLE></a>
+      · GitHub:
+      <a class="text-[color:var(--blue)] underline" href="https://github.com/iosif85">github.com/iosif85</a>
+    </p>
   </section>
 
   <footer class="border-t border-slate-200 bg-white py-6">
-    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-600">© <span id="y"></span> Andreea — Built with HTML + Tailwind on GitHub Pages.</div>
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-600">
+      © <span id="y"></span> Iosif Miclea — Built with HTML + Tailwind on GitHub Pages.
+    </div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
