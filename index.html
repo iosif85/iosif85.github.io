@@ -32,4 +32,199 @@
       <nav class="flex items-center gap-4 text-sm" aria-label="Primary">
         <a href="#projects" class="hover:text-[color:var(--blue)]">Projects</a>
         <a href="#skills" class="hover:text-[color:var(--blue)]">Skills</a>
-        <a href="#about" class="hover:text-[colo]()
+        <a href="#about" class="hover:text-[color:var(--blue)]">About</a>
+        <a href="#contact" class="btn bg-[color:var(--green)] text-white hover:opacity-95">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="mx-auto max-w-6xl px-4 py-16" id="main">
+    <div class="grid items-center gap-8 md:grid-cols-12">
+      <div class="md:col-span-7">
+        <div class="inline-flex items-center gap-2 rounded-full bg-[color:var(--green)]/10 px-3 py-1 text-sm text-[color:var(--green)]">Portfolio</div>
+        <h1 class="mt-4 text-4xl font-semibold text-[color:var(--ink)]">
+          Hello, I’m <span class="whitespace-nowrap">Iosif Miclea</span> — building secure, user-friendly web apps.
+        </h1>
+        <p class="mt-3 text-slate-700">
+          Focused on Python/Flask, React, and networking fundamentals. Below is my assessment project <strong>NestSwap</strong> plus other highlights.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="chip">Python</span>
+          <span class="chip">Flask</span>
+          <span class="chip">SQLite</span>
+          <span class="chip">React</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">Security</span>
+        </div>
+      </div>
+
+      <div class="md:col-span-5">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm text-slate-600">Download assessment PDF</p>
+          <a href="./IosifMiclea-NestSwap-Assessment.pdf" class="mt-2 block btn bg-[color:var(--blue)] text-white hover:opacity-95 text-center">Submission PDF</a>
+          <p class="mt-4 text-sm text-slate-600">CV (optional)</p>
+          <a href="./IosifMiclea-CV.pdf" class="mt-2 block btn border border-slate-300 bg-white hover:bg-slate-50 text-center">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Projects</h2>
+
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      <!-- NestSwap card -->
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="text-xl font-semibold">NestSwap — Caravan & Cabin Exchange</h3>
+          <span class="chip bg-emerald-50 text-emerald-700">Full-stack</span>
+        </div>
+
+        <p class="mt-2 text-slate-700">
+          Browse is free. Premium (£10/year) unlocks <strong>listing</strong>, <strong>messaging</strong>, and <strong>exchanges</strong>.
+          Tech includes secure auth, Stripe membership, photo uploads, map search, per-day availability, and admin moderation.
+        </p>
+
+        <!-- Use the uploaded homepage screenshot -->
+        <img
+          src="./screenshots/nestswap-homepage.png"
+          alt="NestSwap homepage with browse and map"
+          class="mt-4 w-full rounded-xl border border-slate-200 object-cover"
+          loading="lazy" decoding="async"
+        />
+
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600" aria-label="Technologies used">
+          <li class="chip">Flask</li>
+          <li class="chip">React</li>
+          <li class="chip">Stripe</li>
+          <li class="chip">SQLite</li>
+          <li class="chip">Leaflet</li>
+          <li class="chip">Tailwind</li>
+        </ul>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://269eb9cb-fef6-4108-a002-7b023e752de8-00-23hh79byt9ivk.janeway.replit.dev/"
+             class="btn bg-[color:var(--green)] text-white hover:opacity-95" target="_blank" rel="noopener noreferrer">Live demo</a>
+          <a href="https://github.com/iosif85/nestswap"
+             class="btn border border-slate-300 bg-white hover:bg-slate-50" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#screenshots" class="btn border border-slate-300 bg-white hover:bg-slate-50">Screenshots</a>
+        </div>
+      </article>
+
+      <!-- Example secondary project -->
+      <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="text-xl font-semibold">Networking Lab Scripts</h3>
+        <p class="mt-2 text-slate-700">
+          Small Python utilities that automate common networking tasks (config templating, log parsing).
+          Focus on clean CLI design and testability.
+        </p>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm text-slate-600">
+          <li class="chip">Python</li><li class="chip">CLI</li><li class="chip">Testing</li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://github.com/iosif85/<UPDATE_NETWORKING_REPO>"
+             class="btn border border-slate-300 bg-white hover:bg-slate-50" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Skills</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Back-end</h4>
+        <p class="mt-2 text-sm text-slate-700">Python, Flask, REST, SQLAlchemy, SQLite, Auth (JWT + CSRF), Stripe webhooks</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Front-end</h4>
+        <p class="mt-2 text-sm text-slate-700">React, TypeScript, Tailwind, React Router, React Query, accessibility basics</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5">
+        <h4 class="font-medium">Ops & Tools</h4>
+        <p class="mt-2 text-sm text-slate-700">Git/GitHub, Replit, Trello, testing with pytest</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold text-[color:var(--ink)]">About</h2>
+    <p class="mt-2 max-w-3xl text-slate-700">
+      I’m building toward a full-stack developer role that blends my networking background with modern web engineering.
+      I care about clear UX, secure-by-default patterns, and shipping practical, maintainable features.
+    </p>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Screenshots</h2>
+    <p class="mt-2 text-slate-700">Key MVP flows captured from the live demo.</p>
+
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-homepage.png" alt="Homepage with browse and map" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Homepage / Browse</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-login.png" alt="Login form" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Login</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-paywall.png" alt="Premium paywall gating listings, messaging, exchanges" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Premium Paywall</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-createlisting.png" alt="Create listing with photo upload" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Create Listing</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-availability.png" alt="Per-day availability calendar" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Availability Calendar</figcaption>
+      </figure>
+
+      <figure class="rounded-2xl border border-slate-200 bg-white p-3">
+        <img src="./screenshots/nestswap-swaprequests.png" alt="Swap requests list" class="rounded-lg object-cover w-full" loading="lazy" decoding="async" />
+        <figcaption class="mt-2 text-sm text-slate-600">Swap Requests</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Contact — single row, text-only buttons -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Contact</h2>
+    <div class="mt-4 overflow-x-auto">
+      <nav aria-label="Contact links" class="inline-flex min-w-full items-center gap-3 whitespace-nowrap">
+        <a href="mailto:micleaiosif@gmail.com"
+           class="btn bg-[color:var(--blue)] text-white hover:opacity-95">Email</a>
+
+        <a href="https://www.linkedin.com/in/iosif-miclea-702374312"
+           target="_blank" rel="noopener noreferrer"
+           class="btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-50">LinkedIn</a>
+
+        <a href="https://github.com/iosif85"
+           target="_blank" rel="noopener noreferrer"
+           class="btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-50">GitHub</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 bg-white py-6">
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-600">
+      © <span id="y"></span> Iosif Miclea — Built with HTML + Tailwind on GitHub Pages —
+      <a href="https://www.linkedin.com/in/iosif-miclea-702374312"
+         target="_blank" rel="noopener noreferrer"
+         class="underline hover:no-underline">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
