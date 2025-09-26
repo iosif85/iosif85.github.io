@@ -13,12 +13,12 @@
   <meta property="og:url" content="https://iosif85.github.io/" />
   <meta property="og:image" content="https://iosif85.github.io/og-image.png" />
 
-  <!-- Tailwind CDN (simple static site, no build step needed) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{--green:#2f5d50;--blue:#2b6cb0;--earth:#8a7a5b;--ink:#0f172a}
     .chip{border:1px solid rgba(15,23,42,.12);border-radius:9999px;padding:.25rem .6rem;font-size:.8rem}
-    .btn{border-radius:0.75rem;padding:.6rem 1rem;display:inline-flex;align-items:center;justify-content:center}
+    .btn{border-radius:0.75rem;padding:.6rem 1rem;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;white-space:nowrap}
   </style>
 </head>
 
@@ -62,7 +62,6 @@
       <div class="md:col-span-5">
         <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <p class="text-sm text-slate-600">Download assessment PDF</p>
-          <!-- Update the href to your actual PDF filename or remove the button -->
           <a href="./IosifMiclea-NestSwap-Assessment.pdf" class="mt-2 block btn bg-[color:var(--blue)] text-white hover:opacity-95 text-center">Submission PDF</a>
           <p class="mt-4 text-sm text-slate-600">CV (optional)</p>
           <a href="./IosifMiclea-CV.pdf" class="mt-2 block btn border border-slate-300 bg-white hover:bg-slate-50 text-center">Download CV</a>
@@ -88,7 +87,7 @@
           Tech includes secure auth, Stripe membership, photo uploads, map search, per-day availability, and admin moderation.
         </p>
 
-        <!-- Make sure this file exists: /screenshots/nestswap-hero.png -->
+        <!-- Ensure this exists: /screenshots/nestswap-hero.png -->
         <img src="./screenshots/nestswap-hero.png"
              alt="NestSwap UI preview: listings and map"
              class="mt-4 w-full rounded-xl border border-slate-200 object-cover" />
@@ -111,7 +110,7 @@
         </div>
       </article>
 
-      <!-- Example secondary project (edit or duplicate this block) -->
+      <!-- Example secondary project -->
       <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <h3 class="text-xl font-semibold">Networking Lab Scripts</h3>
         <p class="mt-2 text-slate-700">
@@ -157,14 +156,60 @@
     </p>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact — single row (scrollable on small screens) -->
   <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-2xl font-semibold text-[color:var(--ink)]">Contact</h2>
-    <p class="mt-2 text-slate-700">
-      Email:
-      <a class="text-[color:var(--blue)] underline" href="mailto:<UPDATE_EMAIL>"><UPDATE_EMAIL></a>
-      · LinkedIn:
-      <a class="text-[color:var(--blue)] underline"
-         href="https://www.linkedin.com/in/iosif-miclea-702374312"
-         target="_blank" rel="noopener noreferrer">
-         l
+
+    <div class="mt-4 overflow-x-auto">
+      <div class="inline-flex min-w-full items-center gap-3 whitespace-nowrap">
+        <a href="mailto:<UPDATE_EMAIL>"
+           class="btn bg-[color:var(--blue)] text-white hover:opacity-95"
+           aria-label="Email Iosif">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+            <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.35l-10 6.25-10-6.25V6z"></path>
+            <path d="M2 8.23V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.23l-9.35 5.84a3 3 0 0 1-3.3 0L2 8.23z"></path>
+          </svg>
+          <span>Email</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/iosif-miclea-702374312"
+           target="_blank" rel="noopener noreferrer"
+           class="btn border border-slate-300 bg-white hover:bg-slate-50"
+           aria-label="Open LinkedIn profile">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zm7.5 0h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-5.9c0-1.41-.02-3.22-1.96-3.22-1.96 0-2.26 1.53-2.26 3.12V23h-4V8.5z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/iosif85"
+           target="_blank" rel="noopener noreferrer"
+           class="btn border border-slate-300 bg-white hover:bg-slate-50"
+           aria-label="Open GitHub profile">
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.84 10.94c.57.1.78-.25.78-.55v-2.1c-3.19.69-3.86-1.37-3.86-1.37-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.95.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.19a10.9 10.9 0 0 1 5.74 0c2.18-1.5 3.14-1.19 3.14-1.19.63 1.59.24 2.76.12 3.05.74.81 1.18 1.85 1.18 3.11 0 4.42-2.69 5.39-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.2.65.79.54A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <span class="text-slate-400">|</span>
+
+        <span class="text-sm text-slate-700">
+          Email: <a class="underline decoration-slate-300 underline-offset-4" href="mailto:<iosif.miclea@yahoo.com>"><iosif.miclea@yahoo.com></a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 bg-white py-6">
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-600">
+      © <span id="y"></span> Iosif Miclea — Built with HTML + Tailwind on GitHub Pages —
+      <a href="https://www.linkedin.com/in/iosif-miclea-702374312"
+         target="_blank" rel="noopener noreferrer"
+         class="underline hover:no-underline">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
